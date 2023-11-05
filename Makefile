@@ -16,4 +16,4 @@ docker-pull:
 	docker-compose pull
 
 docker-build:
-	docler-compose build --pull
+	docker-compose build --pull
