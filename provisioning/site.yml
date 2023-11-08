@@ -2,5 +2,18 @@
 -   name: Provision Site
     hosts: all
     remote_user: root
+    vars:
+      certbot_email: mail@ivanopol.ru
+      certbot_hosts:
+        - auction.ivanopol.ru
+        - api.auction.ivanopol.ru
     tasks:
-      - import_tasks: tasks/setup_docker.yml
+      -   import_tasks: tasks/setup_docker.yml
+      -   import_tasks: tasks/setup_certbot.yml
+      -   import_tasks: tasks/generate_certificates.yml
+    handlers:
+      -   name: Start docker on boot
+          systemd:
+            name: docker
+            state: started
+            enabled: yes
