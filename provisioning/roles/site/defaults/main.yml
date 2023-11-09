@@ -1,4 +1,4 @@
-certbot_email: mail@ivanopol.ru
+certbot_email: ivanopol777@mail.ru
 certbot_hosts:
   - auction.ivanopol.ru
   - api.auction.ivanopol.ru
