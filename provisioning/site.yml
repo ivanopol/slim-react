@@ -5,4 +5,4 @@
     roles:
       - docker
       - certbot
-      - registry
+      - site
