@@ -4,7 +4,7 @@ services:
     image: nginx:alpine
     restart: always
     ports:
-      - "4443:443"
+      - "4443:4443"
     volumes:
       - /etc/letsencrypt:/etc/letsencrypt:ro
       - /var/www/html:/var/www/html:ro
