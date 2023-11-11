@@ -1,7 +1,7 @@
 ---
 -   name: Renew Certificates
     hosts: all
-    remote_user: site
+    remote_user: registry
     tasks:
       -   name: Renew certificates
           shell: "certbot renew"

@@ -1,0 +1,3 @@
+certbot_email: ivanopol777@mail.ru
+certbot_hosts:
+  - registry.auction.ivanopol.ru

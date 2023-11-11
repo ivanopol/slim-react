@@ -1,0 +1,7 @@
+all:
+    hosts:
+        server:
+            ansible_connection: ssh
+            ansible_user: root
+            ansible_host: 85.193.83.87
+            ansible_port: 22

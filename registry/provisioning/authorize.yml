@@ -1,6 +1,6 @@
 ---
 -   name: Add authorized key
-    hosts: registry
+    hosts: all
     remote_user: root
     tasks:
       -   name: Add user authorized key
