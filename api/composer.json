@@ -19,7 +19,8 @@
         "php-di/php-di": "^6.4",
         "psr/container": "^1.0",
         "slim/psr7": "^1.6",
-        "slim/slim": "^4.3"
+        "slim/slim": "^4.3",
+        "symfony/console": "^5.4"
     },
     "require-dev": {
         "roave/security-advisories": "dev-master"
