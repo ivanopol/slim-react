@@ -33,6 +33,7 @@ services:
       dockerfile: development/php-fpm/Dockerfile
     environment:
       APP_DEBUG: 1
+      APP_ENV: dev
     volumes:
       - ./api:/app
 
@@ -42,5 +43,6 @@ services:
       dockerfile: development/php-cli/Dockerfile
     environment:
       APP_DEBUG: 1
+      APP_ENV: dev
     volumes:
       - ./api:/app

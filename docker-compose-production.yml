@@ -28,8 +28,10 @@ services:
     restart: always
     environment:
       APP_DEBUG: 0
+      APP_ENV: prod
 
   api-php-cli:
     image: ${REGISTRY}/auction-api-php-cli:${IMAGE_TAG}
     environment:
       APP_DEBUG: 0
+      APP_ENV: prod
