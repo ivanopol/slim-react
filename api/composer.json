@@ -1,0 +1,15 @@
+{
+    "name": "ivanopol/auction",
+    "description": "Demo project from ElisDN lessons",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Ivanov Dmitry",
+            "email": "ivanopol777@mail.ru"
+        }
+    ],
+    "require": {
+        "php": "^7.4"
+    }
+}
