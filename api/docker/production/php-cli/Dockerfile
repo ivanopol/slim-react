@@ -17,7 +17,7 @@ RUN composer install --no-dev --prefer-dist --no-progress --no-suggest --optimiz
 
 ### CLI ###
 
-FROM php:7.4-cli-alpine
+FROM --platform=linux/amd64 php:7.4-cli-alpine
 
 RUN docker-php-ext-install opcache
 
