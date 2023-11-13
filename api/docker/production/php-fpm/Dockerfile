@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 php:7.4.0-fpm-alpine AS builder
+FROM --platform=linux/amd64 php:7.4-cli-alpine AS builder
 
 RUN apk add unzip
 
