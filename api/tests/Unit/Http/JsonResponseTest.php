@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
 use stdClass;
 
 /**
- * @covers JsonResponse
+ * @covers \App\Http\JsonResponse
  */
 class JsonResponseTest extends TestCase
 {
