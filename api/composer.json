@@ -23,7 +23,7 @@
         "symfony/console": "^5.4"
     },
     "require-dev": {
-        "overtrue/phplint": "^1.2",
+        "overtrue/phplint": "^3.4",
         "roave/security-advisories": "dev-master"
     },
     "autoload": {
