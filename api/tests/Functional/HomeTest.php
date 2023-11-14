@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Test\Functional;
 
 /**
- * @covers \App\Http\Action\HomeAction
+ * @coversNothing
  */
 class HomeTest extends WebTestCase
 {

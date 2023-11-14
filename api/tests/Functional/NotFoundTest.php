@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Test\Functional;
 
 /**
- * @covers testNotFound
+ * @coversNothing
  */
 class NotFoundTest extends WebTestCase
 {
