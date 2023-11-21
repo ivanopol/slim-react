@@ -49,7 +49,7 @@ services:
       - ./api:/app
 
   api-postgres:
-    image: postgres:12.2-alpine
+    image: postgres:12.17-alpine
     environment:
       POSTGRES_USER: app
       POSTGRES_PASSWORD: secret

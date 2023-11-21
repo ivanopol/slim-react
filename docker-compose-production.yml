@@ -37,7 +37,7 @@ services:
       APP_ENV: prod
 
   api-postgres:
-    image: postgres:12.2-alpine
+    image: postgres:12.17-alpine
     restart: always
     environment:
       POSTGRES_USER: app
