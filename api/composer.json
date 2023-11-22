@@ -22,6 +22,7 @@
         "ramsey/uuid": "^4.2",
         "slim/psr7": "^1.6",
         "slim/slim": "^4.3",
+        "symfony/cache": "^5.4",
         "symfony/console": "^5.4",
         "webmozart/assert": "^1.11"
     },
