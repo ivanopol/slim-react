@@ -12,6 +12,13 @@
         </properties>
     </rule>
 
+    <rule ref="Generic.Files.LineLength">
+        <exclude-pattern>src/Data/Migration</exclude-pattern>
+    </rule>
+    <rule ref="PSR12.Functions.ReturnTypeDeclaration.SpaceBeforeColon">
+        <exclude-pattern>src/Data/Migration</exclude-pattern>
+    </rule>
+
     <file>bin</file>
     <file>config</file>
     <file>public</file>
