@@ -37,6 +37,7 @@ services:
       MAILER_PORT: ${API_MAILER_PORT}
       MAILER_USER: ${API_MAILER_USER}
       MAILER_PASSWORD: ${API_MAILER_PASSWORD}
+      MAILER_FROM_EMAIL: ${API_MAILER_FROM_EMAIL}
       MAILER_ENCRYPTION: tls
 
   api-php-cli:
@@ -53,6 +54,7 @@ services:
       MAILER_USER: ${API_MAILER_USER}
       MAILER_PASSWORD: ${API_MAILER_PASSWORD}
       MAILER_ENCRYPTION: tls
+      MAILER_FROM_EMAIL: ${API_MAILER_FROM_EMAIL}
 
   api-postgres:
     image: postgres:12.17-alpine
