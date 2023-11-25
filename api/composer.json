@@ -24,6 +24,7 @@
         "php-di/php-di": "^6.4",
         "psr/container": "^1.0",
         "ramsey/uuid": "^4.2",
+        "sentry/sdk": "^4.0",
         "slim/psr7": "^1.6",
         "slim/slim": "^4.3",
         "swiftmailer/swiftmailer": "^6.3",
