@@ -57,7 +57,6 @@ class RequestTest extends WebTestCase
 
     public function testEmpty(): void
     {
-        $this->markTestIncomplete('Waiting for validation.');
 
         $response = $this->app()->handle(self::json('POST', '/v1/auth/join', []));
 
@@ -74,7 +73,6 @@ class RequestTest extends WebTestCase
 
     public function testNotValid(): void
     {
-        $this->markTestIncomplete('Waiting for validation.');
 
         $response = $this->app()->handle(self::json('POST', '/v1/auth/join', [
             'email' => 'not-email',

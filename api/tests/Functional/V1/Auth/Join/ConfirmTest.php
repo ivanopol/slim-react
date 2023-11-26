@@ -52,7 +52,6 @@ class ConfirmTest extends WebTestCase
 
     public function testEmpty(): void
     {
-        $this->markTestIncomplete('Waiting for validation.');
 
         $response = $this->app()->handle(self::json('POST', '/v1/auth/join/confirm', []));
 
