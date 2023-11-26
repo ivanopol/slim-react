@@ -17,6 +17,7 @@ class RequestTest extends WebTestCase
             RequestFixture::class,
         ]);
     }
+
     public function testMethod(): void
     {
         $response = $this->app()->handle(self::json('GET', '/v1/auth/join'));
