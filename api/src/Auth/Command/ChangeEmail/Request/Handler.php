@@ -7,9 +7,9 @@ namespace App\Auth\Command\ChangeEmail\Request;
 use App\Auth\Entity\User\Email;
 use App\Auth\Entity\User\Id;
 use App\Auth\Entity\User\UserRepository;
-use App\Auth\Service\Tokenizer;
 use App\Auth\Service\NewEmailConfirmTokenSender;
-use App\Flusher;
+use App\Auth\Service\Tokenizer;
+use App\Http\Flusher;
 use DateTimeImmutable;
 use DomainException;
 

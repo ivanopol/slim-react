@@ -11,7 +11,7 @@ use App\Auth\Entity\User\UserRepository;
 use App\Auth\Service\JoinConfirmationSender;
 use App\Auth\Service\PasswordHasher;
 use App\Auth\Service\Tokenizer;
-use App\Flusher;
+use App\Http\Flusher;
 use DateTimeImmutable;
 use DomainException;
 

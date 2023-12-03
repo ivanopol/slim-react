@@ -7,7 +7,7 @@ namespace App\Auth\Command\AttachNetwork;
 use App\Auth\Entity\User\Id;
 use App\Auth\Entity\User\Network;
 use App\Auth\Entity\User\UserRepository;
-use App\Flusher;
+use App\Http\Flusher;
 
 class Handler
 {
