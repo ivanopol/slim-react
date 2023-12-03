@@ -22,6 +22,7 @@
         "laminas/laminas-config-aggregator": "^1.9",
         "monolog/monolog": "^2.9",
         "php-di/php-di": "^6.4",
+        "ptlis/conneg": "^4.0",
         "ramsey/uuid": "^4.2",
         "sentry/sdk": "^4.0",
         "slim/psr7": "^1.6",
