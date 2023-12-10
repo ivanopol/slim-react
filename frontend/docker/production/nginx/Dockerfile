@@ -1,6 +1,6 @@
 FROM --platform=linux/amd64 nginx:1.17-alpine
 
-COPY ./docker/common/nginx/conf.d /etc/nginx/conf.d
+COPY ./docker/production/nginx/conf.d /etc/nginx/conf.d
 
 WORKDIR /app
 
