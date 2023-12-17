@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 php:7.4-cli-alpine AS builder
+FROM php:7.4-cli-alpine AS builder
 
 RUN apk add --no-cache postgresql-dev \
     && docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql \
@@ -8,7 +8,7 @@ RUN apk add --no-cache unzip
 
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/bin --filename=composer --quiet \
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/bin --filename=composer --version=1.10.26 --quiet \
     && composer global require hirak/prestissimo --no-plugins --no-scripts \
     && rm -rf /root/.composer/cache
 
@@ -21,7 +21,7 @@ RUN composer install --prefer-dist --no-progress --no-suggest --optimize-autoloa
 
 ### CLI ###
 
-FROM --platform=linux/amd64 php:7.4-cli-alpine
+FROM php:7.4-cli-alpine
 
 RUN apk add --no-cache postgresql-dev bash coreutils \
     && docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql \
