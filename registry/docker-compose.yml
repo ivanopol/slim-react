@@ -4,44 +4,16 @@ services:
     image: nginx:alpine
     ports:
       - "5001:5000"
-      - "8000:8000"
     volumes:
       - ./docker/development/nginx/conf.d:/etc/nginx/conf.d
       - ./docker/development/nginx/auth/htpasswd:/etc/nginx/auth/htpasswd
     depends_on:
       - registry
-      - jenkins
 
   registry:
     image: registry:2.6
     volumes:
       - registry:/var/lib/registry
 
-  jenkins:
-    build:
-      context: ./docker/development/jenkins
-    environment:
-      DOCKER_HOST: tcp://docker:2376
-      DOCKER_CERT_PATH: /certs/client
-      DOCKER_TLS_VERIFY: 1
-    volumes:
-      - jenkins-data:/var/jenkins_home
-      - docker-certs:/certs/client:ro
-    depends_on:
-      - docker
-
-  docker:
-    image: docker:dind
-    privileged: true
-    environment:
-      DOCKER_TLS_CERTDIR: /certs
-    volumes:
-      - jenkins-data:/var/jenkins_home
-      - docker-certs:/certs/client
-      - docker-data:/var/lib/docker
-
 volumes:
   registry:
-  jenkins-data:
-  docker-certs:
-  docker-data:
