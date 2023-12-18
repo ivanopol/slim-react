@@ -4,11 +4,13 @@ services:
     image: nginx:alpine
     ports:
       - "5001:5000"
+      - "8000:8000"
     volumes:
       - ./docker/development/nginx/conf.d:/etc/nginx/conf.d
       - ./docker/development/nginx/auth/htpasswd:/etc/nginx/auth/htpasswd
     depends_on:
       - registry
+      - jenkins
 
   registry:
     image: registry:2.6
@@ -17,8 +19,6 @@ services:
 
   jenkins:
     image: jenkinsci/blueocean
-    ports:
-      - "8000:8080"
     environment:
       DOCKER_HOST: tcp://docker:2376
       DOCKER_CERT_PATH: /certs/client
