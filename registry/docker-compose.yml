@@ -18,7 +18,8 @@ services:
       - registry:/var/lib/registry
 
   jenkins:
-    image: jenkinsci/blueocean
+    build:
+      context: ./docker/development/jenkins
     environment:
       DOCKER_HOST: tcp://docker:2376
       DOCKER_CERT_PATH: /certs/client
