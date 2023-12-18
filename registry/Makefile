@@ -17,6 +17,9 @@ docker-pull:
 docker-build:
 	docker-compose build
 
+show-initial-password:
+	docker-compose exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
+
 deploy:
 	ssh ${HOST} -p ${PORT} 'rm -rf registry && mkdir registry'
 	scp -P ${PORT} docker-compose-production.yml ${HOST}:registry/docker-compose.yml
