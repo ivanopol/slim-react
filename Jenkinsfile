@@ -7,7 +7,7 @@ pipeline {
         CI = 'true'
     }
     stages {
-        stage("Init 1s") {
+        stage("Init") {
             steps {
                 sh "make init"
             }
