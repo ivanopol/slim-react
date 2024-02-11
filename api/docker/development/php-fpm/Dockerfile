@@ -1,4 +1,4 @@
-FROM php:7.4-fpm-alpine3.13
+FROM php:7.4-fpm-alpine3.12
 
 RUN apk add --no-cache autoconf g++ make \
     && pecl install xdebug-2.9.7 \
