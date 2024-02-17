@@ -74,6 +74,9 @@ class UserRepository
 
     public function get(Id $id): User
     {
+        /**
+         * @psalm-suppress MixedAssignment
+         * */
         if (!$user = $this->repo->find($id->getValue())) {
             throw new DomainException('User is not found.');
         }
@@ -83,6 +86,9 @@ class UserRepository
 
     public function getByEmail(Email $email): User
     {
+        /**
+         * @psalm-suppress MixedAssignment
+         * */
         if (!$user = $this->repo->findOneBy(['email' => $email->getValue()])) {
             throw new DomainException('User is not found.');
         }

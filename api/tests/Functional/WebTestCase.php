@@ -57,6 +57,9 @@ class WebTestCase extends TestCase
         /** @var EntityManagerInterface $em */
         $em = $container->get(EntityManagerInterface::class);
         $executor = new ORMExecutor($em, new ORMPurger($em));
+        /**
+         * @psalm-suppress InvalidArgument
+         */
         $executor->execute($loader->getFixtures());
     }
 

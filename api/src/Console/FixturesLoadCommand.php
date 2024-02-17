@@ -53,6 +53,9 @@ class FixturesLoadCommand extends Command
             $output->writeln($message);
         });
 
+        /**
+         * @psalm-suppress InvalidArgument
+         */
         $executor->execute($loader->getFixtures());
 
         $output->writeln('<info>Done!</info>');

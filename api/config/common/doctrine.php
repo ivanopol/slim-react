@@ -45,6 +45,9 @@ return [
 
         foreach ($settings['types'] as $name => $class) {
             if (!Type::hasType($name)) {
+                /**
+                 * @psalm-suppress ArgumentTypeCoercion
+                 */
                 Type::addType($name, $class);
             }
         }
@@ -57,6 +60,9 @@ return [
             $eventManager->addEventSubscriber($subscriber);
         }
 
+        /**
+         * @psalm-suppress MixedArgumentTypeCoercion
+         */
         return EntityManager::create(
             $settings['connection'],
             $config,
