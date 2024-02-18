@@ -21,7 +21,7 @@ RUN composer install --no-dev --prefer-dist --no-progress --no-suggest --optimiz
 
 ### FPM ###
 
-FROM --platform=linux/amd64  php:7.4.0-fpm-alpine
+FROM --platform=linux/amd64  php:7.4.0-fpm-alpine3.13
 
 RUN apk add --no-cache postgresql-dev make \
     && docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql \
