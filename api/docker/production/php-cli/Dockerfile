@@ -1,6 +1,6 @@
-FROM --platform=linux/amd64 php:7.4-cli-alpine AS builder
+FROM --platform=linux/amd64 php:7.4-cli-alpine3.13 AS builder
 
-RUN apk add --no-cache postgresql-dev \
+RUN apk add --no-cache postgresql-dev make \
     && docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql \
     && docker-php-ext-install pdo_pgsql opcache
 
@@ -21,9 +21,9 @@ RUN composer install --no-dev --prefer-dist --no-progress --no-suggest --optimiz
 
 ### CLI ###
 
-FROM --platform=linux/amd64 php:7.4-cli-alpine
+FROM --platform=linux/amd64 php:7.4-cli-alpine3.13
 
-RUN apk add --no-cache postgresql-dev bash coreutils \
+RUN apk add --no-cache postgresql-dev bash coreutils make \
     && docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql \
     && docker-php-ext-install pdo_pgsql opcache
 
